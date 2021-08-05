@@ -1,0 +1,11 @@
+{
+  "name": "testWork",
+  "version": "0.0.1",
+  "authors": [
+    "omelniz <omelniz@gmail.com>"
+  ],
+  "description": "testWork",
+  "dependencies": {
+    "jquery.lazyload": "~1.9.5"
+  }
+}

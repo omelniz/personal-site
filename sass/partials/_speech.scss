@@ -1,0 +1,42 @@
+#speech {
+	margin-bottom: em(50px);
+}
+
+.speech__item {
+	margin-bottom: em(18px);
+
+	h4 {
+		@include font-base;
+	}
+}
+
+.speech__meta {
+	font-size: em(12px);
+	line-height: em(16px, 12px);
+}
+
+.speech__item__title {
+	margin-bottom: em(5px, 21px);
+}
+
+.speech__title {
+	margin-bottom: em(24px, 21px);
+}
+
+@include respond-to(mobile-hd) {
+	#speech {
+		margin-bottom: em(66px);
+	}
+}
+
+@include respond-to(phablet) {
+	#speech {
+		@include column('2/4');
+	}
+}
+
+@include respond-to(laptop) {
+	#speech {
+		@include column('2/8');
+	}
+}

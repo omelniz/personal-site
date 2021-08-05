@@ -1,0 +1,112 @@
+#intro {
+	position: relative;
+
+	hgroup {
+		margin-bottom: em(28px);
+
+		h1 {
+			color: $color-primary;
+		}
+
+		h1, h2 {
+			@include responsive-text-size("mega");
+			margin-bottom: 0px;
+		}
+	}
+
+	p {
+		margin-bottom: em(18px, 21px);
+	}
+}
+
+.intro__content,
+.intro__aside {
+	margin-bottom: em(48px);
+}
+
+.intro__aside {
+	display: none;
+}
+
+.intro__myPhoto {
+	display: none;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+.intro__getInTouch__title {
+	font-size: em(18px);
+	line-height: ratio(25px, 18px);
+	margin-bottom: em(8px, 18px);
+}
+
+@include respond-to(mobile-hd) {
+	#intro {
+		hgroup {
+			margin-bottom: em(36px);
+			margin-right: em(160px);
+			max-width: em(400px);
+		}
+	}
+
+	.intro__getInTouch__title {
+		font-size: em(21px);
+		line-height: ratio(28px, 21px);
+	}
+
+	.intro__getInTouch__text {
+		font-size: em(18px);
+		line-height: ratio(30px, 18px);
+	}
+
+	.intro__myPhoto {
+		position: absolute;
+		top: em(-12px);
+		right: 0px;
+		display: block;
+		@include square(em(136px));
+	}
+}
+
+@include respond-to(tablet) {
+	#intro {
+		hgroup {
+			margin-bottom: em(49px);
+			margin-right: 0px;
+			max-width: 100%;
+		}
+	}
+
+	.intro__getInTouch__title,
+	.intro__getInTouch__text {
+		@include font-base;
+		display: inline;
+		font-size: em(14px);
+		line-height: ratio(24px, 14px);
+	}
+
+	.intro__getInTouch__title {
+		&::after {
+			content: ". ";
+		}
+	}
+
+	.intro__content {
+		@include column('7/8');
+		padding-top: em(23px);
+	}
+
+	.intro__aside {
+		@include column('2/8');
+	}
+
+	.intro__myPhoto {
+		position: static;
+		top: 0px;
+		right: auto;
+		@include square(em(130px));
+		margin-bottom: em(25px);
+	}
+}

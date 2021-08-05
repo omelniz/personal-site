@@ -1,0 +1,40 @@
+.languages {
+	font-size: em(14px);
+	margin-bottom: em(20px, 14px);
+}
+
+.languages__switch {
+	li {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: em(10px, 14px);
+	}
+}
+
+@include respond-to(mobile-hd) {
+	.languages {
+		font-size: em(18px);
+	}
+}
+
+@include respond-to(phablet) {
+	.languages {
+		font-size: em(16px);
+	}
+}
+
+@include respond-to(tablet) {
+	.languages {
+		margin-bottom: 0px;
+	}
+}
+
+@include respond-to(laptop) {
+	.languages {
+		font-size: em(14px);
+
+		position: absolute;
+		top: em(26px, 14px);
+		right: em(26px, 14px);
+	}
+}

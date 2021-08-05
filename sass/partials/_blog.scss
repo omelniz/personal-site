@@ -1,0 +1,33 @@
+#blog {
+	margin-bottom: em(50px);
+}
+
+.blog__item {
+	margin-bottom: em(7px);
+
+	h4 {
+		@include font-base;
+	}
+}
+
+.blog__title {
+	margin-bottom: em(24px, 21px);
+}
+
+@include respond-to(mobile-hd) {
+	#blog {
+		margin-bottom: em(66px);
+	}
+}
+
+@include respond-to(phablet) {
+	#blog {
+		@include column('2/4');
+	}
+}
+
+@include respond-to(laptop) {
+	#blog {
+		@include column('2/8');
+	}
+}

@@ -1,0 +1,9 @@
+@function breakpoint($breakpoint-name) {
+  	@return map-get($breakpoints, $breakpoint-name);
+}
+
+@mixin respond-to($breakpoint-name) {
+  	@media screen and (min-width: breakpoint($breakpoint-name)) {
+    	@content;
+  	}
+}

@@ -1,0 +1,20 @@
+.banner {
+    &.banner--top {
+        text-align: center;
+        max-width: 1152px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #FFF;
+        margin-top: 14px;
+        margin-bottom: 14px;
+        display: none;
+    }
+}
+
+@include respond-to(laptop) {
+    .banner {
+        &.banner--top {
+            display: block;
+        }
+    }
+}

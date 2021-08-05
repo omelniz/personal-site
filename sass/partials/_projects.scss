@@ -1,0 +1,125 @@
+#projects-list {
+	margin-bottom: em(50px);
+	margin-left: em(-28px);
+	margin-right: em(-28px);
+}
+
+.project {
+	margin-bottom: em(12px);
+	position: relative;
+	box-sizing: border-box;
+	height: 150px;
+}
+
+.project__link,
+.project__content {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+}
+
+.project__link {
+	z-index: 1;
+}
+
+.project__content {
+	box-sizing: border-box;
+	padding: em(22px) em(28px);
+	background-color: rgba(0, 0, 0, .5);
+	transition: background-color .3s ease;
+}
+
+.project__illustation {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+.project__name,
+.project__desc {
+	color: #fff;
+	transition: color .3s ease;
+}
+
+.project__name {
+	margin-bottom: em(4px, 18px);
+	font-size: em(18px);
+}
+
+.project__desc {
+	font-size: em(14px);
+	line-height: em(20px, 14px);
+}
+
+.projects-list__footer {
+	margin-top: em(27px);
+	text-align: center;
+	display: none !important;
+}
+
+.projects-list__loadMore {
+	@include responsive-text-size("hecto");
+}
+
+@include respond-to(mobile-hd) {
+	#projects-list {
+		margin-left: em(-20px);
+		margin-right: em(-20px);
+		margin-bottom: em(66px - 12px);
+	}
+
+	.projects-list__loadMore {
+		font-size: em(28px);
+	}
+
+	.project__content {
+		padding: em(22px) em(20px);
+	}
+}
+
+@include respond-to(phablet) {
+	.project {
+		@include column('1/2', $gut: 28px);
+		margin-bottom: 14px;
+		height: 250px;
+		overflow: hidden;
+	}
+
+	.project__content {
+		background-color: rgba(0, 0, 0, .3);
+		padding: em(30px) em(34px);
+	}
+
+	.project__name {
+		font-size: em(21px);
+	}
+
+	.project__desc {
+		font-size: em(16px);
+		line-height: em(20px, 16px);
+	}
+
+	.project__name,
+	.project__desc {
+		color: #fff;
+	}
+
+	.projects-list__footer {
+		display: none;
+	}
+}
+
+@include respond-to(desktop) {
+	#projects-list {
+		margin-left: em($gutter / 2 * -1);
+		margin-right: 0px;
+	}
+}

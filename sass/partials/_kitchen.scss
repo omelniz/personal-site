@@ -1,0 +1,32 @@
+#kitchen p.lead {
+	margin-bottom: em(70px, 21px);
+}
+
+.kitchen__item {
+	margin-bottom: em(41px);
+	display: none;
+}
+
+.kitchen__item__title {
+	font-size: em(14px);
+	line-height: ratio(19px, 14px);
+	margin-bottom: em(14px, 14px);
+}
+
+.kitchen__item__figure {
+	img {
+		max-width: 100%;
+	}
+}
+
+.kitchen__title {
+	margin-bottom: em(24px, 21px);
+}
+
+@include respond-to(mobile-hd) {
+	.kitchen__item__title {
+		font-size: em(16px);
+		line-height: ratio(20px, 16px);
+		margin-bottom: em(14px, 16px);
+	}
+}

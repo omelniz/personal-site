@@ -1,0 +1,47 @@
+body,
+input,
+textarea,
+button {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+
+	@include font-base;
+    font-size: $base-font-size;
+}
+
+a {
+	text-decoration: none;
+	color: $color-link;
+}
+
+#wrapper {
+	@include center($max-width);
+	padding: map-get($wrapper-padding, mobile);
+	background-color: #FFF;
+	box-sizing: border-box;
+	position: relative;
+}
+
+@include respond-to(mobile-hd) {
+	#wrapper {
+		padding: map-get($wrapper-padding, mobile-hd);
+	}
+}
+
+@include respond-to(phablet) {
+	#wrapper {
+		padding: map-get($wrapper-padding, phablet);
+	}
+}
+
+@include respond-to(tablet) {
+	#wrapper {
+		padding: map-get($wrapper-padding, tablet);
+	}
+}
+
+@include respond-to(desktop) {
+	#wrapper {
+		padding: map-get($wrapper-padding, desktop);
+	}
+}

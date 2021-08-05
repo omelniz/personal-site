@@ -1,0 +1,63 @@
+@mixin center-block($width: $max-width) {
+    margin: 0 auto;
+    max-width: $width;
+}
+
+@mixin reset-btn {
+    border: none;
+    background: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin square($size) {
+    @include size($size, $size);
+}
+
+@mixin text-and-link-color($color) {
+    color: $color;
+
+    a {
+        color: $color;
+    }
+}
+
+@mixin reset-text-input {
+    border: none;
+    outline: none;
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin inline-box($width: false, $align: top) {
+    display: inline-block;
+    vertical-align: $align;
+    @if $width != false {
+        width: $width;
+    }
+}
+
+@function calc-percent($target, $context: $base-width) {
+    @if $target == 0 {
+        @return 0
+    }
+    @return $target / $context * 100%;
+}

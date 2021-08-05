@@ -1,0 +1,19 @@
+#about-work {
+	margin-bottom: em(50px);
+}
+
+.about-work__title {
+	margin-bottom: em(24px, 21px);
+}
+
+@include respond-to(mobile-hd) {
+	#about-work {
+		margin-bottom: em(66px);
+	}
+}
+
+@include respond-to(laptop) {
+	#about-work {
+		@include column('4/8');
+	}
+}
